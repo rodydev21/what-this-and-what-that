@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What this and what that</title>
+    <link rel="stylesheet" href="What Does.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="start-container">
+        <img src="img/Logo.png" alt="Logo" class="logo"> 
+        <button id="start-button">Play</button>
+        
+    </div>
+    
+    <!-- شعار (لوجو) في الأعلى من اليمين -->
+    <div id="logo-container">
+        <img src="img/Logo.png" alt="Logo" id="logo">
+    </div>
+
+    <div id="game-container">
+        <div id="score">Score: <span id="score-value">0</span></div>
+        <button id="listen-button">
+            <svg id="listen-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-.77-3.29-2-4.32v8.63c1.23-1.03 2-2.55 2-4.31zm2.5 0c0 2.69-1.1 5.1-2.88 6.83l1.42 1.42A10.435 10.435 0 0022 12c0-2.89-1.1-5.5-2.96-7.25l-1.42 1.42C18.9 6.9 19.5 9.34 19.5 12z"></path>
+            </svg>
+        </button>
+        
+        <div id="question-box">
+            <div id="question-text">هذا هو السؤال</div> <!-- نص السؤال هنا -->
+        </div>
+        <!-- صندوق لعرض الصورة -->
+        <div id="image-placeholder">
+            <img id="question-image" src="" alt="Question Image">
+        </div>
+    
+        <div id="answers">
+            <button class="answer-btn" id="answer1">الإجابة 1</button>
+            <button class="answer-btn" id="answer2">الإجابة 2</button>
+            <button class="answer-btn" id="answer2">الإجابة 2</button>
+        </div>
+        <div id="confetti" class="hidden"></div>
+    </div>
+    
+    <audio id="question-audio" src="Sound Ai/What Does This Mean.mp3"></audio>
+    <audio id="success-audio" src="sounds/Excellent.mp3"></audio>
+    <audio id="success-audio2" src="sounds/win (mp3cut.net).mp3"></audio>
+    <audio id="wrong-audio" src="sounds/false.mp3"></audio>
+
+    <script src="What Does.js"></script>
+</body>
+</html>

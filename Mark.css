@@ -1,0 +1,101 @@
+body {
+    font-family: "Protest Strike", sans-serif;
+    background: url('img/bg/bg1.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+}
+
+/* حاوية الدرجة */
+.grade-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 4vw;
+    border-radius: 20px;
+    box-shadow: 0px 0.5vw 1vw rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: popUp 0.5s ease-out;
+    max-width: 90%;
+}
+
+/* تأثير الظهور */
+@keyframes popUp {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* العنوان */
+h1 {
+    font-size: 3.5vw;
+    color: #ff4081;
+    margin-bottom: 2vw;
+    animation: bounce 1.5s infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* معلومات اللاعب */
+.player-info {
+    font-size: 4vw;
+    color: #3f51b5;
+    margin-bottom: 3vw;
+}
+
+/* الأزرار */
+button {
+    margin: 1vw;
+    padding: 1vw 2vw;
+    font-size: 2vw;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #ffeb3b;
+    color: #000;
+    border: 0.4vw solid #ff9800;
+    border-radius: 50px;
+    box-shadow: 0 0.5vw 1.5vw rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #ffc107;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* استعلامات الوسائط للأجهزة الصغيرة */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 5vw;
+    }
+
+    .player-info {
+        font-size: 6vw;
+    }
+
+    button {
+        font-size: 3.5vw;
+        padding: 2vw 3vw;
+    }
+}

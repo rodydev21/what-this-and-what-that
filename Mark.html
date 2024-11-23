@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What this and what that</title>
+    <link rel="stylesheet" href="Mark.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="grade-container">
+        <h1>🎉 Your Mark 🎉</h1>
+        <div class="player-info">
+            <p><strong>Mark:</strong> 10/10</p>
+        </div>
+        <button id="homeBtn">🏠 Play again</button>
+        <button id="exitBtn">🚪 Exit</button>
+    </div>
+
+    <audio id="win-sound" src="sounds/well down.mp3"></audio>
+
+    <script>
+        window.addEventListener('load', () => {
+            const winSound = document.getElementById('win-sound');
+            winSound.play();
+        });
+
+        document.getElementById('homeBtn').addEventListener('click', () => {
+            window.location.href = 'index.html'; 
+        });
+
+        document.getElementById('exitBtn').addEventListener('click', () => {
+            window.location.href = 'https://englisheasy.net/dashboard'; //حطي اللنك هنا
+        });
+    </script>
+</body>
+</html>
